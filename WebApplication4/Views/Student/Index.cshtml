@@ -1,0 +1,20 @@
+﻿@using WebApplication4.Models
+
+@model StudentDeparmt
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    StudentDeparmt aDeparment = new StudentDeparmt();
+}
+
+<h2>Index</h2>
+@foreach (var item in Model.Department.AllStudents)
+{
+    <p>@aDeparment.Department.Departmentid</p>
+    <p>@aDeparment.Department.DepartmentName</p>
+    <p>@item.StudentId</p> 
+    <p>@item.StudentName</p>
+    <p>@item.Age</p>
+
+}
+
